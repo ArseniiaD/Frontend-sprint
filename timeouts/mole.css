@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ground {
+    width: 800px;
+    height: 800px;
+    background-color: green;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 65px;
+    padding: 65px;
+}
+.hole {
+    background-color: brown;
+    border-radius: 50%;
+    
+}
+.mole{
+    width: 9%;
+    position: absolute;
+    /*left: 39%;
+    bottom: 21%;*/
+}

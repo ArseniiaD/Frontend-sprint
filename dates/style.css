@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+}
+.mainDiv {
+    display: flex;
+    width: 1100px;
+    height: 550px;
+    background-color: #EAEAEA;
+    justify-content: center;
+    align-items: center;
+}
+.left {
+    width: 35%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 4%;
+}
+.top {
+    color: white;
+    background-color: #B03737;
+    width: 100%;
+    height: 20%;
+    border: 5px solid #912C2C;
+    border-bottom: none;
+    border-radius: 65px 65px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+.middle {
+    height: 60%;
+    border-left: 5px solid #D3D3D3;
+    border-right: 5px solid #D3D3D3;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 115px;
+}
+.bottom {
+    color: white;
+    background-color: #B03737;
+    width: 100%;
+    height: 20%;
+    border: 5px solid #912C2C;
+    border-top: none;
+    border-radius: 0 0 65px 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+.right {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #474747;
+}
+.hours {
+    font-size: 165px;
+}
+.secs {
+    padding-top: 53px;
+    font-size: 95px;
+}
