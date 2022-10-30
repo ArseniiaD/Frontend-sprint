@@ -1,34 +1,45 @@
-const holes = document.querySelectorAll('.hole')
-//const holes = [...document.querySelectorAll('.hole')]
-const mole = document.createElement('img')
-mole.classList.add('mole')
-mole.src = 'mole.png'
-const scoreSpan = document.querySelector('.score span')
+const button = document.createElement("button")
+button.innerText = "Press to start!"
+document.body.prepend(button)
+button.classList.add('button')
+
+const p = document.createElement("p")
+p.textContent = "When your score is 100 - you win!"
+document.body.prepend(p)
+p.classList.add('p')
+
+const holes = [...document.querySelectorAll('.hole')]
+
 let score = 0
+let score1 = document.querySelector('.score span')
 
 const startGame = () => {
-      const i = Math.floor(Math.random() * holes.length)
-      const hole = holes[i]
-      let timer = 0
+       const i = Math.floor(Math.random() * holes.length)
+       const hole = holes[i]
+       let timer = 0
 
-      hole.appendChild(mole)
+       const mole = document.createElement('img')
+       mole.classList.add('mole')
+       mole.src = 'mole.png'
 
-      mole.addEventListener('click', () => {
+       hole.appendChild(mole)
+
+       mole.addEventListener('click', () => {
         score += 10
-        scoreSpan.textContent = score
-        clearInterval(timer)
-        setTimeout(() => {
-            hole.removeChild(mole)
-            startGame()
-        }, 1500)
-        
-      })
+        score1.textContent = score
+        })
 
       hole.appendChild(mole)
-
+      
+      if (score < 100) {
       timer = setTimeout(() => {
         hole.removeChild(mole)
         startGame()
-    }, 1500)
+        }, 1500)
+      }
+      else {
+        alert("You won!")
+      }
 } 
-startGame()
+
+button.addEventListener('click', startGame)
